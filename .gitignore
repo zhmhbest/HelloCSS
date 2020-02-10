@@ -1,11 +1,3 @@
-.idea/dataSources
-.idea/dictionaries
-.idea/inspectionProfiles
-.idea/dataSources.local.xml
-.idea/dataSources.xml
-.idea/misc.xml
-.idea/vcs.xml
-.idea/workspace.xml
+.idea
+test.html
 **/__pycache__
-
-static/__demo__
