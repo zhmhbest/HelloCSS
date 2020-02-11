@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动布局</title>
+    <style>
+        h2 { clear: both }
+        .test-container {background-color: bisque; width: 600px}
+        .Resolve-height-collapse1 {overflow: hidden; zoom:1}
+        .Resolve-height-collapse2 { zoom:1 }
+        .Resolve-height-collapse2:after {content: ''; display: block; clear: both}
+        /* zoom: 是兼容IE6的代码 */
+        .box { width: 75px; height: 75px }
+        .box1 {background-color: darkcyan;}
+        .box2 {background-color: fuchsia;}
+        .box3 {background-color: brown;}
+        .box4 {background-color: cornflowerblue;}
+    </style>
+</head>
+<body>
+
+
+<h2>浮动</h2>
+<p>子元素浮动时，不能撑开父元素</p>
+<p>子元素浮动范围由父元素的上左右位置决定</p>
+<p>浮动元素不会覆盖父元素的内容</p>
+<hr>
+<div class="test-container">
+    <div class="box box1" style="float: left">1</div>
+    <div class="box box2" style="float: left">2</div>
+    <div class="box box3" style="float: right">3</div>
+    <div class="box box4" style="float: right">4</div>
+    父元素内容
+</div><div style="background-color: coral">浮动后内容</div>
+
+
+<h2>解决浮动塌陷1</h2><hr>
+<div class="test-container Resolve-height-collapse1">
+    <div class="box box1" style="float: left">1</div>
+    <div class="box box2" style="float: left">2</div>
+    <div class="box box3" style="float: right">3</div>
+    <div class="box box4" style="float: right">4</div>
+    父元素内容
+</div><div style="background-color: coral">浮动后内容</div>
+
+
+<h2>清除浮动</h2><hr>
+<div class="test-container">
+    <div class="box box1" style="float: left">1</div>
+    <div class="box box2" style="float: left">2</div>
+    <div class="box box3" style="float: right">3</div>
+    <div class="box box4" style="float: right">4</div>
+    父元素内容
+</div><div style="background-color: coral; clear: both">浮动后内容</div>
+
+
+<h2>解决浮动塌陷2（推荐）</h2><hr>
+<div class="test-container Resolve-height-collapse2">
+    <div class="box box1" style="float: left">1</div>
+    <div class="box box2" style="float: left">2</div>
+    <div class="box box3" style="float: right">3</div>
+    <div class="box box4" style="float: right">4</div>
+    父元素内容
+</div><div style="background-color: coral">浮动后内容</div>
+
+</body>
+</html>
