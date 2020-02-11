@@ -1,73 +1,7 @@
 <html lang="zh">
 <head>
-    <title>CSS Flex布局</title>
+    <title>Flex</title>
     <meta charset="utf-8">
-    <!-- 参考： -->
-    <!-- 该部分展示了Flex布局的详细设置 -->
-    <style>
-        /* 容器属性
-            # 主轴方向: 左右水平(默认) | 右左水平 | 上下垂直 | 下上垂直
-            flex-direction: row | row-reverse | column | column-reverse;
-
-            # 一行排不下时如何换行: 不换行（默认） | 换行，第一行在上方 | 换行，第一行在下方
-            flex-wrap: nowrap | wrap | wrap-reverse;
-
-            # 缩写 <flex-direction> <flex-wrap>
-            flex-flow: <flex-direction> <flex-wrap>
-
-            # 水平如何对齐: 左（默认） | 右 | 中 | 两端 | 假两端
-            justify-content: flex-start | flex-end | center | space-between | space-around;
-
-            # 垂直如何对齐: 头 | 尾 | 中心轴 | 文本低端 | 占满高度（默认）
-            align-items: flex-start | flex-end | center | baseline | stretch;
-
-            # 多轴对齐: 双轴起点 | 双轴终点 | 居中 |　两端 | 假两端 | 占满交叉轴（默认）
-            align-content: flex-start | flex-end | center | space-between | space-around | stretch;
-        */
-        .flex_container {
-            display: flex;
-            /* 主轴方向 */
-            flex-direction: row;
-
-            /* 允许溢出 */
-            flex-wrap: nowrap;
-
-            /* 水平对齐 */
-            justify-content: flex-start;
-
-            /* 垂直对齐 */
-            align-items: stretch;
-
-            /* 多轴对齐 */
-            align-content: stretch;
-        }
-
-        /* 子对象属性
-            # 项目排列顺序，顺序越小越靠前
-            order: <integer>;
-
-            # 项目的放大比例，默认为0
-            flex-grow: <number>;
-
-            # 项目的缩小比例，默认为1
-            flex-shrink: <number>;
-
-            # 在分配多余空间之前，项目占据的主轴空间
-            flex-basis: <length> | auto;
-
-            # 缩写 <flex-grow> <flex-shrink> <flex-basis>
-            flex: 0 1 auto
-
-            # 允许单个对象有与其他对象不一样的对齐方式
-            align-self: auto | flex-start | flex-end | center | baseline | stretch;
-        */
-        .flex_children {
-            flex: 0 1 auto;
-            align-self: auto;
-        }
-    </style>
-
-
     <!-- 该部分展示了一个demo的css样式设置 -->
     <style>
         body {
@@ -107,41 +41,23 @@
             /* 边界阴影部分（了解即可） */
             box-shadow: inset 0 3px #111, inset 0 -3px #555;
         }
+        * {padding: 0; margin: 0}
+        .row {display: flex; flex-wrap: wrap; flex-direction: row;}
+        .col {display: flex; flex-wrap: wrap; flex-direction: column;}
+        .align-space-between {justify-content: space-between;}
+        .align-center {justify-content: center;}
+        .align-start {justify-content: flex-start;}
+        .align-end {justify-content: flex-end;}
 
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-        }
-        .col {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-        }
-
-        .align-space-between {
-            display: flex;
-            justify-content: space-between;
-        }
-        .align-center {
-            display: flex;
-            justify-content: center;
-        }
-        .align-start {
-            display: flex;
-            justify-content: flex-start;
-        }
-        .align-end {
-            display: flex;
-            justify-content: flex-end;
-        }
+        .my-container {display: flex; flex-wrap: wrap; flex-direction: row; margin-left: 20px}
     </style>
 </head>
 <body>
 
 
-<div class="row">
-    <h2>9</h2>
+<h2>9</h2>
+<div class="my-container">
+    <h3>行</h3>
     <div class="dice col align-space-between">
         <div class="row align-space-between">
             <div class="pip"></div>
@@ -159,6 +75,8 @@
             <div class="pip"></div>
         </div>
     </div>
+
+    <h3>列</h3>
     <div class="dice row align-space-between">
         <div class="col align-space-between">
             <div class="pip"></div>
@@ -178,8 +96,10 @@
     </div>
 </div>
 
-<div class="row">
-    <h2>6</h2>
+
+<h2>6</h2>
+<div class="my-container">
+    <h3>行</h3>
     <div class="dice col align-space-between">
         <div class="row align-space-between">
             <div class="pip"></div>
@@ -194,6 +114,8 @@
             <div class="pip"></div>
         </div>
     </div>
+
+    <h3>列</h3>
     <div class="dice row align-space-between">
         <div class="col align-space-between">
             <div class="pip"></div>
@@ -208,8 +130,10 @@
     </div>
 </div>
 
-<div class="row">
-    <h2>5</h2>
+
+<h2>5</h2>
+<div class="my-container">
+    <h3>行</h3>
     <div class="dice col align-space-between">
         <div class="row align-space-between">
             <div class="pip"></div>
@@ -223,6 +147,8 @@
             <div class="pip"></div>
         </div>
     </div>
+
+    <h3>列</h3>
     <div class="dice row align-space-between">
         <div class="col align-space-between">
             <div class="pip"></div>
@@ -239,8 +165,9 @@
 </div>
 
 
-<div class="row">
-    <h2>4</h2>
+<h2>4</h2>
+<div class="my-container">
+    <h3>行</h3>
     <div class="dice col align-space-between">
         <div class="row align-space-between">
             <div class="pip"></div>
@@ -251,6 +178,8 @@
             <div class="pip"></div>
         </div>
     </div>
+
+    <h3>列</h3>
     <div class="dice row align-space-between">
         <div class="col align-space-between">
             <div class="pip"></div>
@@ -264,8 +193,9 @@
 </div>
 
 
-<div class="row">
-    <h2>3</h2>
+<h2>3</h2>
+<div class="my-container">
+    <h3>行</h3>
     <div class="dice col align-space-between">
         <div class="row align-start">
             <div class="pip"></div>
@@ -277,6 +207,8 @@
             <div class="pip"></div>
         </div>
     </div>
+
+    <h3>列</h3>
     <div class="dice row align-space-between">
         <div class="col align-start">
             <div class="pip"></div>
@@ -291,8 +223,9 @@
 </div>
 
 
-<div class="row">
-    <h2>2</h2>
+<h2>2</h2>
+<div class="my-container">
+    <h3>行</h3>
     <div class="dice col align-space-between">
         <div class="row align-start">
             <div class="pip"></div>
@@ -301,6 +234,8 @@
             <div class="pip"></div>
         </div>
     </div>
+
+    <h3>列</h3>
     <div class="dice row align-space-between">
         <div class="col align-start">
             <div class="pip"></div>
@@ -312,13 +247,16 @@
 </div>
 
 
-<div class="row">
-    <h2>1</h2>
+<h2>1</h2>
+<div class="my-container">
+    <h3>行</h3>
     <div class="dice col align-center">
         <div class="row align-center">
             <div class="pip"></div>
         </div>
     </div>
+
+    <h3>列</h3>
     <div class="dice row align-center">
         <div class="col align-center">
             <div class="pip"></div>

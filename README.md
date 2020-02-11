@@ -130,6 +130,29 @@
 | em  | 1 em = 1 当前元素的 font-size
 | rem | 1 rem = 1 根元素的 font-size
 
+## Color
+
+```css
+{
+    /* 颜色名
+     *   #RRGGBB
+     *   rgb(<num:[0, 255]>, <num:[0, 255]>, <num:[0, 255]>)
+     *   rgba(<num:[0, 255]>, <num:[0, 255]>, <num:[0, 255]>, <num:[0, 1]>)
+     *
+     *   rgb(<num:[0, 100]%>, <num:[0, 100]%>, <num:[0, 100]%>)
+     *   rgba(<num:[0, 100]%>, <num:[0, 100]%>, <num:[0, 100]%>, <num:[0, 100]%>)
+     *      
+     *   hsl(<num:[0, 360]>,  <num:[0, 100]%>,  <num:[0, 100]%>)
+     *   hsla(<num:[0, 360]>,  <num:[0, 100]%>,  <num:[0, 100]%>,  <num:[0, 100]%>)
+     */
+    /* 前景色 */
+    color: pink;
+
+    /* 背景色 */
+    background-color: gold;
+}
+```
+
 ## Font
 
 ```css
