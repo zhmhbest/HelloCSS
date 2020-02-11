@@ -42,16 +42,18 @@
 ## Hidden
 
 ```css
-/* 方法1：不占据页面空间 */
-display: none;
+{
+    /* 方法1：不占据页面空间 */
+    display: none;
 
-/* 方法2：占据页面空间，无法点击 */
-visibility: hidden;
-/* visibility: visible; */
+    /* 方法2：占据页面空间，无法点击 */
+    visibility: hidden;
+    /* visibility: visible; */
 
-/* 方法3：占据页面空间，可以点击 */
-opacity: 0;
-/* opacity: 1; */
+    /* 方法3：占据页面空间，可以点击 */
+    opacity: 0;
+    /* opacity: 1; */
+}
 ```
 
 ## Selector
@@ -131,25 +133,27 @@ opacity: 0;
 ## Font
 
 ```css
-/* 字体类型： Serif | Sans-serif | Monospace | Cursive | Fantasy */
-font-family: Serif;
-/* 可用逗号同时指定多个字体类型 */
+{
+    /* 字体类型： Serif | Sans-serif | Monospace | Cursive | Fantasy */
+    font-family: Serif;
+    /* 可用逗号同时指定多个字体类型 */
 
-/* 字体风格： normal | italic:斜体 | oblique:倾斜 */
-font-style: normal;
+    /* 字体风格： normal | italic:斜体 | oblique:倾斜 */
+    font-style: normal;
 
-/* 字体变形： normal | small-caps:小型大写字母 */
-font-variant: normal;
+    /* 字体变形： normal | small-caps:小型大写字母 */
+    font-variant: normal;
 
-/* 字体加粗： normal | bold | <number:[100, 900]>:加粗等级 */
-font-weight: normal;
+    /* 字体加粗： normal | bold | <number:[100, 900]>:加粗等级 */
+    font-weight: normal;
 
-/* 字体大小： 长度单位 */
-font-size: 100%;
+    /* 字体大小： 长度单位 */
+    font-size: 100%;
 
-/* 简写 */
-/* font: style family; */
-/* font: style weight size family; */
+    /* 简写 */
+    /* font: style family; */
+    /* font: style weight size family; */
+}
 ```
 
 ## Box
@@ -218,23 +222,25 @@ font-size: 100%;
 #### 容器属性
 
 ```css
-/* 主轴方向: 左右水平(默认) | 右左水平 | 上下垂直 | 下上垂直 */
-flex-direction: row | row-reverse | column | column-reverse;
+{
+    /* 主轴方向: 左右水平(默认) | 右左水平 | 上下垂直 | 下上垂直 */
+    flex-direction: row | row-reverse | column | column-reverse;
 
-/* 一行排不下时如何换行: 不换行（默认） | 换行，第一行在上方 | 换行，第一行在下方 */
-flex-wrap: nowrap | wrap | wrap-reverse;
+    /* 一行排不下时如何换行: 不换行（默认） | 换行，第一行在上方 | 换行，第一行在下方 */
+    flex-wrap: nowrap | wrap | wrap-reverse;
 
-/* 缩写 <flex-direction> <flex-wrap> */
-/* flex-flow: <flex-direction> <flex-wrap>; */
+    /* 缩写 <flex-direction> <flex-wrap> */
+    /* flex-flow: <flex-direction> <flex-wrap>; */
 
-/* 水平如何对齐: 左（默认） | 右 | 中 | 两端 | 假两端 */
-justify-content: flex-start | flex-end | center | space-between | space-around;
+    /* 水平如何对齐: 左（默认） | 右 | 中 | 两端 | 假两端 */
+    justify-content: flex-start | flex-end | center | space-between | space-around;
 
-/* 垂直如何对齐: 头 | 尾 | 中心轴 | 文本低端 | 占满高度（默认） */
-align-items: flex-start | flex-end | center | baseline | stretch;
+    /* 垂直如何对齐: 头 | 尾 | 中心轴 | 文本低端 | 占满高度（默认） */
+    align-items: flex-start | flex-end | center | baseline | stretch;
 
-/* 多轴对齐: 双轴起点 | 双轴终点 | 居中 |　两端 | 假两端 | 占满交叉轴（默认） */
-align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+    /* 多轴对齐: 双轴起点 | 双轴终点 | 居中 |　两端 | 假两端 | 占满交叉轴（默认） */
+    align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}
 ```
 
 - justify-content
