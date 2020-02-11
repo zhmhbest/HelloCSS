@@ -247,21 +247,23 @@ align-content: flex-start | flex-end | center | space-between | space-around | s
 #### 子对象属性
 
 ```css
-/* 项目排列顺序，顺序越小越靠前 */
-order: <integer>;
+{
+    /* 项目排列顺序，顺序越小越靠前 */
+    order: <integer>;
 
-/* 项目的放大比例，默认为0 */
-flex-grow: <number>;
+    /* 项目的放大比例，默认为0 */
+    flex-grow: <number>;
 
-/* 项目的缩小比例，默认为1 */
-flex-shrink: <number>;
+    /* 项目的缩小比例，默认为1 */
+    flex-shrink: <number>;
 
-/* 在分配多余空间之前，项目占据的主轴空间 */
-flex-basis: <length> | auto;
+    /* 在分配多余空间之前，项目占据的主轴空间 */
+    flex-basis: <length> | auto;
 
-/* 缩写 <flex-grow> <flex-shrink> <flex-basis> */
-flex: 0 1 auto;
+    /* 缩写 <flex-grow> <flex-shrink> <flex-basis> */
+    flex: 0 1 auto;
 
-/* 允许单个对象有与其他对象不一样的对齐方式 */
-align-self: auto | flex-start | flex-end | center | baseline | stretch;
+    /* 允许单个对象有与其他对象不一样的对齐方式 */
+    align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
 ```
