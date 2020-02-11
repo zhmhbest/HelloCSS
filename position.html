@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>简单布局</title>
+    <style>
+        * {padding: 0; margin: 0}
+        .box {width: 100px; height: 100px; background-color: #555555}
+    </style>
+    <script>
+        /**
+         * 设置元素位置
+         * @param {object} obj
+         * @param {array} coordinate: 坐标
+         * @param {number} [display_order]: 显示顺序，越大越靠上
+         * @param {string} [position_mod]: 'f' | 'a' | 'r'
+         */
+        function setPosition(obj, coordinate, display_order, position_mod) {
+            // Coordinate
+            if( !(coordinate instanceof Object) || undefined === coordinate.length || 0===coordinate.length) {
+                console.error('coordinate error');
+                return;
+            }
+            if (coordinate.length>2) {
+                // 1:右上 | 2:右下 | 3:左下 | 0:左上
+                switch (coordinate[2]) {
+                    case 1:
+                        obj.style.right = coordinate[0]; obj.style.top = coordinate[1]; break;
+                    case 2:
+                        obj.style.right = coordinate[0]; obj.style.bottom = coordinate[1]; break;
+                    case 3:
+                        obj.style.left = coordinate[0]; obj.style.bottom = coordinate[1]; break;
+                    default:
+                        obj.style.left = coordinate[0]; obj.style.top = coordinate[1]; break;
+                }
+            } else {
+                switch (coordinate.length) {
+                    case 1:
+                        obj.style.left = coordinate[0]; obj.style.top = coordinate[0]; break;
+                    case 2:
+                        obj.style.left = coordinate[0]; obj.style.top = coordinate[1]; break;
+                }
+            }
+            // Position
+            if(undefined===position_mod) {
+                obj.style.position = 'fixed';
+            } else {
+                if('f'===position_mod)      { obj.style.position = 'fixed'; }
+                else if('a'===position_mod) { obj.style.position = 'absolute'; }
+                else if('r'===position_mod) { obj.style.position = 'relative'; }
+            }
+            // Display Order
+            if (undefined!==display_order) {
+                obj.style['z-index'] = display_order; // 越大越靠上，可取负值
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="box" style="background-color: seagreen"></div>
+    <div class="box" style="background-color: coral"></div>
+    <div class="box" style="background-color: plum"></div>
+    <div class="box" style="background-color: hotpink"></div>
+    <div class="box" style="background-color: skyblue"></div>
+    <script>
+        var objs = document.getElementsByClassName('box');
+        setPosition(objs[0], ['50px']);
+        setPosition(objs[1], ['150px', '150px']);
+        setPosition(objs[2], ['50px', '50px', 1]);
+        setPosition(objs[3], ['50px', '50px', 2]);
+        setPosition(objs[4], ['50px', '50px', 3]);
+    </script>
+</body>
+</html>

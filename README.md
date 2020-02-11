@@ -236,6 +236,11 @@
 
 ## Layout
 
+### [Position](position.html)
+
+- 绝对布局
+- 相对布局
+
 ### [Float](float.html)
 
 - 浮动布局
@@ -243,6 +248,8 @@
 ### [Flex](flex.html)
 
 #### 容器属性
+
+- Flex布局
 
 ```css
 {
