@@ -6,26 +6,27 @@
     <style>
         .test-container {background-color: bisque}
         .Resolve-margin-top-deliver:before {content: ''; display: table}
-        .s-box {width: 50px; height: 50px}
-        .m-box {width: 75px; height: 75px}
-        .l-box {width: 100px; height: 100px}
+        .box-50 {width: 50px; height: 50px}
+        .box-75 {width: 75px; height: 75px}
+        .box-100 {width: 100px; height: 100px}
     </style>
 </head>
 <body>
 
 <h2>相邻兄弟元素之间的垂直外边距以最大值决定</h2>
-<p>两个盒子上下间距为100px</p><hr>
+<p>每个盒子边长50px，两个盒子上下间距为100px</p>
+<hr>
 <div class="test-container">
-    <div class="s-box" style="background-color: darkcyan; margin-bottom: 100px;"></div>
-    <div class="s-box" style="background-color: fuchsia; margin-top: 50px;"></div>
+    <div class="box-50" style="background-color: darkcyan; margin-bottom: 100px;"></div>
+    <div class="box-50" style="background-color: hotpink; margin-top: 50px;"></div>
 </div>
 
 
 <h2>子元素的上外边距会传递给父元素</h2>
 <p>外层盒子上边距50px</p><hr>
 <div class="test-container">
-    <div class="l-box" style="background-color: darkcyan;">
-        <div class="s-box" style="background-color: fuchsia; margin-top: 50px;"></div>
+    <div class="box-100" style="background-color: darkcyan;">
+        <div class="box-50" style="background-color: hotpink; margin-top: 50px;"></div>
     </div>
 </div>
 
@@ -33,8 +34,8 @@
 <h2>解决外边界传递</h2>
 <p>内层盒子距外层盒子上边距50px</p><hr>
 <div class="test-container">
-    <div class="l-box Resolve-margin-top-deliver" style="background-color: darkcyan;">
-        <div class="s-box" style="background-color: fuchsia; margin-top: 50px"></div>
+    <div class="box-100 Resolve-margin-top-deliver" style="background-color: darkcyan;">
+        <div class="box-50" style="background-color: hotpink; margin-top: 50px"></div>
     </div>
 </div>
 
