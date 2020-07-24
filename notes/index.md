@@ -172,33 +172,51 @@
 
 ![](images/box.png)
 
-- padding: 内边距
-  - `padding: top right bottom left;`
-- border: 边框
-  - `border: width style color`
-  - `border-width: top right bottom left`
-  - `border-style: top right bottom left`
-  - `border-color: top right bottom left`
-- margin: 外边距
-  - `margin: top right bottom left;`
+```css
+{
+    /* 内边距 */
+    padding: top right bottom left;
+
+    /* 边框 */
+    border: width style color;
+    border-width: top right bottom left;
+    border-style: top right bottom left;
+    border-color: top right bottom left;
+
+    /* 外边距 */
+    margin: top right bottom left;
+}
+```
 
 ![缩写规则](./images/trbl.png)
 
-**border-style**
-
-| Value   | Effect |
+| 边框样式 | 效果 |
 | :-:     | :-: |
-| none	  | 无边框
-| hidden  |	无边框，用于解决`table`边框冲突
-| dotted  |	点状
-| dashed  |	虚线
-| solid	  | 实线。
-| double  |	双线
-| groove  |	3D 凹槽
-| ridge	  | 3D 垄状
-| inset	  | 3D inset
-| outset  |	3D outset
-| inherit |	从父元素继承边框样式。
+| non     | 无边框
+| hidden  | 无边框，用于解决`table`边框冲突
+| dotted  | 点状
+| dashed  | 虚线
+| solid   | 实线
+| double  | 双线
+| groove  | 3D 凹槽
+| ridge   | 3D 垄状
+| inset   | 3D inset
+| outset  | 3D outset
+| inherit | 从父元素继承边框样式。
+
+### Rect
+
+#### client
+
+![](./images/client.png)
+
+#### offset
+
+![](./images/offset.png)
+
+#### scroll
+
+![](./images/scroll.png)
 
 ### Margin
 
