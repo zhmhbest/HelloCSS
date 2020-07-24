@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>内容溢出</title>
+    <style>
+        .test-container {background-color: bisque}
+        .box1 {background-color: darkcyan; width: 100px; height: 100px;}
+        .box2 {background-color: grey; width: 50px;}
+    </style>
+</head>
+<body>
+
+<h2>溢出内容直接可见</h2><hr>
+<div class="test-container" style="overflow: visible">
+    <div class="box1">这是背景
+        <div class="box2">
+            <div>0</div><div>1</div><div>2</div><div>3</div><div>4</div>
+        </div>
+    </div>
+</div>
+
+
+<h2>溢出内容不可见</h2><hr>
+<div class="test-container" style="overflow: hidden">
+    <div class="box1">这是背景
+        <div class="box2">
+            <div>0</div><div>1</div><div>2</div><div>3</div><div>4</div>
+        </div>
+    </div>
+</div>
+
+
+<h2>增加滚动条</h2><hr>
+<div class="test-container" style="overflow: scroll">
+    <div class="box1">这是背景
+        <div class="box2">
+            <div>0</div><div>1</div><div>2</div><div>3</div><div>4</div>
+        </div>
+    </div>
+</div>
+
+
+<h2>溢出后再自动增加滚动条</h2><hr>
+<div class="test-container" style="overflow: auto">
+    <div class="box1">这是背景
+        <div class="box2">
+            <div>0</div><div>1</div><div>2</div><div>3</div><div>4</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
