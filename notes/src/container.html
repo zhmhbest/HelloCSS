@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Container</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            margin: 2%;
+        }
+        .part {
+            display: inline-block;
+            overflow: scroll;
+        }
+        /* Block容器 */
+        .container {
+            display: block;
+            background-color: bisque;
+            margin-bottom: 50px;
+        }
+        /* Flex容器 */
+        .flex_row {display: flex; flex-wrap: wrap; flex-direction: row;}
+        .flex_col {display: flex; flex-wrap: wrap; flex-direction: column;}
+    </style>
+</head>
+<body>
+    <h2>（Block容器）虽然宽度都是50%，但不能同行显示</h2>
+    <div class="container">
+        <div class="part" style="width: 50%; background-color: cadetblue;">50%</div>
+        <div class="part" style="width: 50%; background-color: lightskyblue;">50%</div>
+    </div>
+
+    <h2>（Block容器）49%、50%能同行显示</h2>
+    <div class="container">
+        <div class="part" style="width: 49%; background-color: cadetblue;">49%</div>
+        <div class="part" style="width: 50%; background-color: lightskyblue;">50%</div>
+    </div>
+
+    <h2>（Flex容器）50%、50%能同行显示</h2>
+    <div class="flex_row">
+        <div class="part" style="width: 50%; background-color: cadetblue;">50%</div>
+        <div class="part" style="width: 50%; background-color: lightskyblue;">50%</div>
+    </div>
+</body>
+</html>
